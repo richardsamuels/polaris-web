@@ -1,6 +1,6 @@
 <template>
     <div ref="root" class="cursor-pointer relative" draggable="true" @click="seekToCursor" @dragstart="onDragStart"
-        @dragend="endDrag">
+        @dragend="endDrag" @mouseup="endDrag">
         <!--
          Preferably, we would draw a single white waveform canvas. We would then
          use it as mask for two empty divs with colored backgrounds. However, this
