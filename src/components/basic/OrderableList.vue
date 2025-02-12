@@ -5,7 +5,7 @@
             :style="{ height: `${props.items.length * rowHeight}px` }">
             <TransitionGroup :name="isReordering ? 'reorder' : 'drop'" :css="isReordering">
                 <div v-for="item, index of virtualItems" @click="e => clickItem(e, item)" :key="item.key"
-                    :draggable="true" @dragstart="e => onDragStart(e, item)" @dragend="onDragEnd"
+                    :draggable="true" @dragstart="e => onDragStart(e, item)" @dragend="onDragEnd" @mouseup="onDragEnd"
                     class="absolute w-full"
                     :style="{ translate: `0 ${rowOffset(firstVirtualIndex + index)}px`, height: `${itemHeight}px` }">
 

@@ -1,7 +1,7 @@
 <template>
     <div class="w-full h-full">
         <div class="w-full h-full" :draggable="!disabled" @dragstart="onDragStart" @drag="updateDrag"
-            @dragend="endDrag">
+            @dragend="endDrag" @mouseup="endDrag">
             <div class="w-full h-full" :class="{ 'pointer-events-none': !allowPointerEventsInside }">
                 <slot />
             </div>

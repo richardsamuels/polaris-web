@@ -6,6 +6,8 @@
                     tabindex="-1" @node-toggle="toggleNode" @click="clickNode($event, node.data)"
                     @dblclick="onNodeDoubleClick($event, node.data)" draggable="true"
                     @dragstart="onDragStart($event, node.data)" @drag="onDrag($event)" @dragend="onDragEnd($event)"
+                    @mouseup="onDragEnd($event)"
+
                     :expanded="expandedKeys.has(node.data.key)" :focused="focusedKey == node.data.key"
                     :selected="selectedKeys.has(node.data.key)">
                 </VirtualTreeNode>
